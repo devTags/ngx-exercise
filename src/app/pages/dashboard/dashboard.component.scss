@@ -1,37 +1,50 @@
 .dashboard-container {
-    // gap: .5em;
-    // display: grid;
-    // grid-template-columns: repeat(2, minmax(10%, 1fr));
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+  // gap: .5em;
+  // display: grid;
+  // grid-template-columns: repeat(2, minmax(10%, 1fr));
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .card-container {
-    padding: 1rem;
-    // margin: 3rem;
+  padding: 1rem;
+  // margin: 3rem;
 }
 
 .card-body {
-    padding: 2rem;
-    width: 630px !important;
-    height: 100% !important;
-    border-radius: 10px;
-    background-color: white;
-    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .5);
-
+  padding: 2rem;
+  min-width: 420px !important;
+  max-width: 500px !important;
+  height: 100% !important;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.5);
 }
 
 ejs-chart {
-    width: 100%;
-    height: 100%
+  width: 100%;
+  height: 100%;
 }
 
 .ngx-card-container {
-    text-align: center;
-    padding: 1rem;
-    width: 1300px !important;
-    border-radius: 10px;
-    background-color: white;
-    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  width: 350px !important;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.5);
+}
+
+
+@media only screen and (max-width: 600px) {
+   .card-body{
+    min-width: 350px !important;
+   }
+
+   .ngx-card-container {
+    width: 350px !important;
+   }
 }

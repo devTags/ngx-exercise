@@ -90,7 +90,7 @@ export class DashboardComponent implements OnInit {
     })
   }
 
-  onSelect (event: any): void {
+  onSelect (event: KeyboardEvent): void {
     console.log(event)
   }
 }

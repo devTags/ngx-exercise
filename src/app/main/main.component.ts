@@ -15,10 +15,12 @@ import { SidebarComponent } from '@syncfusion/ej2-angular-navigations'
 export class MainComponent implements OnInit {
   @ViewChild('sidebar') sidebar!: SidebarComponent
   @ViewChild('togglebtn')
-  public width: string = '290px'
+  public width: string = '280px'
   public showBackdrop: boolean = false
-  public isClosed: boolean = false
-  parentMsg: string = ''
+  public isOpen: boolean = false
+  public closeOnDocumentClick: boolean = true
+  public mediaQuery: object = window.matchMedia('(max-width: 400px)');
+
   constructor () {}
 
   ngOnInit (): void {}
@@ -26,17 +28,8 @@ export class MainComponent implements OnInit {
   public onCreated (args: any) {
     this.sidebar.element.style.visibility = ''
   }
-  openClick (): void {
-    this.sidebar.toggle()
-  }
 
   toggleClick (): void {
-    if (this.isClosed) {
-      this.isClosed = false
-      this.sidebar.show()
-    } else {
-      this.isClosed = true
-      this.sidebar.hide()
-    }
+    this.sidebar.toggle()
   }
 }

@@ -75,7 +75,7 @@
     <div class="ngx-card-container">
         <div class="ngx-card">
             <div #ContainerRef>
-                <ngx-charts-pie-grid [view]="[1300, 400]" [scheme]="colorScheme" [results]="ngxChartData"
+                <ngx-charts-pie-grid [view]="[ContainerRef.offsetWidth, 400]" [scheme]="colorScheme" [results]="ngxChartData"
                     (select)="onSelect($event)">
                 </ngx-charts-pie-grid>
             </div>
