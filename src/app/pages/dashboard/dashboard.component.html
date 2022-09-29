@@ -1,0 +1,85 @@
+<div class="dashboard-container">
+
+    <div class="card-container">
+        <div class="card-body">
+            <ejs-chart id="chart-container" [primaryXAxis]='primaryXAxis' [title]="title1">
+                <e-series-collection>
+                    <e-series [dataSource]='chartData' type='Column' xName='countryName' yName='unemploymentRate'
+                        name='Rate'></e-series>
+                </e-series-collection>
+            </ejs-chart>
+        </div>
+    </div>
+
+    <div class="card-container">
+        <div class="card-body">
+            <ejs-chart id="chart-container1" [primaryXAxis]='primaryXAxis' [primaryYAxis]='primaryYAxis'
+                [title]='title2'>
+                <e-series-collection>
+                    <e-series [dataSource]='chartData1' type='Line' xName='saleDate' yName='saleRate' width=2
+                        [marker]='marker'></e-series>
+                </e-series-collection>
+            </ejs-chart>
+        </div>
+    </div>
+
+    <div class="card-container">
+        <div class="card-body">
+            <ejs-chart id="chart-container2" [primaryXAxis]='primaryXAxis' [title]="title1">
+                <e-series-collection>
+                    <e-series [dataSource]='chartData' type='Bar' xName='countryName' yName='unemploymentRate'
+                        name='Rate'></e-series>
+                </e-series-collection>
+            </ejs-chart>
+        </div>
+    </div>
+
+    <div class="card-container">
+        <div class="card-body">
+            <ejs-chart id="chart-container3" [primaryXAxis]='primaryXAxis1' [primaryYAxis]='primaryYAxis1'
+                [title]='title3'>
+                <e-series-collection>
+                    <e-series [dataSource]='chartData1' type='Area' xName='saleDate' yName='saleRate' name='Product A'
+                        fill='#69D2E7' opacity=0.2></e-series>
+                </e-series-collection>
+            </ejs-chart>
+        </div>
+    </div>
+
+
+
+    <div class="card-container">
+        <div class="card-body">
+            <div #ContainerRef>
+                <ngx-charts-bar-vertical [view]="[ContainerRef.offsetWidth, 400]" [scheme]="colorScheme"
+                    [results]="ngxChartData" [animations]="true" [gradient]="true" [xAxis]="true" [yAxis]="true"
+                    [legend]="true" [showXAxisLabel]="true" [showYAxisLabel]="true" [showDataLabel]="true"
+                    [xAxisLabel]="xAxisLabel" [yAxisLabel]="yAxisLabel" (select)="onSelect($event)">
+                </ngx-charts-bar-vertical>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="card-container">
+        <div class="card-body">
+            <div #ContainerRef>
+                <ngx-charts-pie-chart [view]="[ContainerRef.offsetWidth, 400]" [scheme]="colorScheme"
+                    [results]="ngxChartData" [gradient]="true" [legend]="true" [explodeSlices]="true" [labels]="true"
+                    [doughnut]="true" [gradient]="true" [labels]="true">
+                </ngx-charts-pie-chart>
+            </div>
+        </div>
+    </div>
+
+    <div class="ngx-card-container">
+        <div class="ngx-card">
+            <div #ContainerRef>
+                <ngx-charts-pie-grid [view]="[1300, 400]" [scheme]="colorScheme" [results]="ngxChartData"
+                    (select)="onSelect($event)">
+                </ngx-charts-pie-grid>
+            </div>
+        </div>
+    </div>
+
+</div>

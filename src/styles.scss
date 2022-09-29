@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+html,body{
+    margin: 0 !important;
+    height: 100% !important;
+    background: var(--bluegray-50);
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, Helvetica, Arial, sans-serif, “Apple Color Emoji”, “Segoe UI Emoji”, “Segoe UI Symbol”;
+}
+
+
+@import '../node_modules/@syncfusion/ej2-base/styles/material.scss';  
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.scss';  
+@import '../node_modules/@syncfusion/ej2-calendars/styles/material.scss';  
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.scss';  
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material.scss';  
+@import '../node_modules/@syncfusion/ej2-navigations/styles/material.scss';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material.scss';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.scss';  
+@import '../node_modules/@syncfusion/ej2-angular-grids/styles/material.scss';
