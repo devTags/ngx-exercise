@@ -3,20 +3,39 @@
   // display: grid;
   // grid-template-columns: repeat(2, minmax(10%, 1fr));
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-around;
 }
 
 .card-container {
-  padding: 1rem;
-  // margin: 3rem;
+  gap: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1rem;
+
+  transition: 0.3s;
+  border-radius: 10px;
+  height: 50vh !important;
+  background-color: white;
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.5);
+  }
 }
 
 .card-body {
-  padding: 2rem;
-  min-width: 420px !important;
-  max-width: 500px !important;
-  height: 100% !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  min-width: 50vw !important;
+  max-width: 100vw !important;
+  height: 50vh !important;
   border-radius: 10px;
   background-color: white;
   box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.5);
@@ -32,19 +51,68 @@ ejs-chart {
   align-items: center;
   justify-content: center;
   padding: 1rem;
-  width: 350px !important;
+  min-width: 500px !important;
+  max-width: 700px !important;
   border-radius: 10px;
   background-color: white;
   box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.5);
 }
 
+//Karge Monitor
+@media only screen and (min-width: 1920px) {
+  .card-container {
+    padding: 1rem !important;
+    min-width: 25vw !important;
+  }
+  .card-body {
+    min-width: 25vw !important;
+    // max-width: 600px !important;
+  }
+}
 
+//Laptop and monitor view
+@media only screen and (min-width: 992px) {
+  .card-container {
+    padding-top: 1rem !important;
+    padding: 1rem;
+    min-width: 30vw !important;
+    max-width: 100vw !important;
+    // margin: 3rem;
+  }
+
+  .card-body {
+    padding: 1rem;
+    min-width: 40vw !important;
+    max-width: 100vw !important;
+    // max-width: 600px !important;
+  }
+}
+
+//Mobile view
 @media only screen and (max-width: 600px) {
-   .card-body{
+  .card-container {
+    padding-top: 1rem !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 400px !important;
     min-width: 350px !important;
-   }
+    max-width: 350px !important;
+    // margin: 3rem;
+  }
 
-   .ngx-card-container {
-    width: 350px !important;
-   }
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 400px !important;
+    min-width: 350px !important;
+    max-width: 350px !important;
+  }
+
+  .ngx-card-container,
+  .ngx-card {
+    min-width: 500px !important;
+    max-width: 500px !important;
+  }
 }

@@ -19,4 +19,13 @@ describe('MainComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy()
   })
+
+  it('should call toggleClick', () => {
+    // expect(component.sidebar.toggle).toBeTruthy();
+
+    component.toggleClick()
+
+    // expect(component.sidebar.toggle).toBeFalsy()
+
+  })
 })

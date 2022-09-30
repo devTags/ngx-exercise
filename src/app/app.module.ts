@@ -30,6 +30,10 @@ import { RadioButtonModule } from '@syncfusion/ej2-angular-buttons';
 //ngx charts module
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 
+
+//primeng charts module 
+// import {ChartModule} from 'primeng/chart';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,6 +54,7 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
     SidebarModule,
     RadioButtonModule,
     NgxChartsModule
+    
   ],
   providers: [BarSeriesService, StackingBarSeriesService, LineSeriesService, StepLineSeriesService, DateTimeService, DataLabelService, StackingColumnSeriesService, CategoryService,
     StepAreaSeriesService, SplineSeriesService, ScrollBarService, ChartAnnotationService, LegendService, TooltipService, StripLineService,
