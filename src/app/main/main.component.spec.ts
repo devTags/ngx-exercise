@@ -22,7 +22,7 @@ describe('MainComponent', () => {
 
   it('should call toggleClick', () => {
     // expect(component.sidebar.toggle).toBeTruthy();
-
+    fixture.detectChanges()
     component.toggleClick()
 
     // expect(component.sidebar.toggle).toBeFalsy()

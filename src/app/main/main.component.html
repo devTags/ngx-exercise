@@ -1,11 +1,13 @@
-<ejs-sidebar id="default-sidebar" #sidebar style="visibility: hidden" [width]="'200px'"
+<ejs-sidebar id="default-sidebar" #sidebar style="visibility: hidden" [width]="'100px'"
     [showBackdrop]="false">
     <div class="title"></div>
 
     <div class="center-align">
         <a routerLinkActive="router-link-active" routerLink="/main/dashboard"
-            [routerLinkActiveOptions]="{ exact: true }">
-            <p>Dashboard</p>
+            [routerLinkActiveOptions]="{ exact: true }" pTooltip="Dashboard">
+
+            <i class="pi pi-microsoft"></i>
+            <!-- <p>Dashboard</p> -->
         </a>
     </div>
 </ejs-sidebar>

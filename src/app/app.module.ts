@@ -33,6 +33,7 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 //primeng charts module 
 // import {ChartModule} from 'primeng/chart';
+import {TooltipModule} from 'primeng/tooltip';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
     ButtonModule,
     SidebarModule,
     RadioButtonModule,
-    NgxChartsModule
+    NgxChartsModule,
+    TooltipModule
     
   ],
   providers: [BarSeriesService, StackingBarSeriesService, LineSeriesService, StepLineSeriesService, DateTimeService, DataLabelService, StackingColumnSeriesService, CategoryService,
